@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,7 +15,10 @@
         android:theme="@style/Theme.KisanSarthi"
         tools:targetApi="31">
         <activity
-            android:name=".FarmersActivity"
+            android:name=".CaptureImageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
             android:exported="false" />
         <activity
             android:name=".SplashActivity"
@@ -26,8 +31,17 @@
             </intent-filter>
             <!-- activity having intent filter will run first when launched -->
         </activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
 
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.kisansarthi.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
 
 </manifest>

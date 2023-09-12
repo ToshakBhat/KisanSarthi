@@ -1,107 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:background="@drawable/bg"
-tools:context=".MainActivity">
-
-<TextView
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/spinner"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/signin"
-    android:text="Sign in"
-    android:textColor="@color/white"
-    android:textSize="35dp"
-    android:textStyle="bold"
-    android:layout_margin="50dp"
-    android:gravity="center"/>
-
-<EditText
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/username"
-    android:layout_below="@id/signin"
-    android:background="#30ffffff"
-    android:hint="Username"
-    android:textColorHint="@color/white"
-    android:textColor="@color/white"
-    android:layout_margin="10dp"
-    android:padding="20dp"
-    android:drawableLeft="@drawable/ic_baseline_person_outline_24"
-    android:drawablePadding="20dp"/>
-
-<EditText
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/password"
-    android:layout_below="@id/username"
-    android:background="#30ffffff"
-    android:hint="Password"
-    android:textColorHint="@color/white"
-    android:textColor="@color/white"
-    android:layout_margin="10dp"
-    android:padding="20dp"
-    android:drawableLeft="@drawable/ic_baseline_info_24"
-    android:drawablePadding="20dp"
-    android:inputType="textPassword"/>
-
-<com.google.android.material.button.MaterialButton
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/loginbtn"
-    android:layout_below="@id/password"
-    android:text="LOGIN"
-    android:backgroundTint="@color/design_default_color_secondary"
-    android:layout_centerHorizontal="true"
-    android:layout_margin="20dp"
-    />
-
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/forgotpass"
-    android:layout_below="@id/loginbtn"
-    android:text="Forgot password?"
-    android:textColor="@color/white"
-    android:layout_centerHorizontal="true"
-    android:layout_margin="20dp"/>
-
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/others"
-    android:layout_above="@id/socialicons"
-    android:text="or sign in with"
-    android:layout_centerHorizontal="true"/>
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".MainActivity">
 
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/socialicons"
-    android:layout_alignParentBottom="true"
-    android:gravity="center">
+    <TextView
+        android:id="@+id/signin"
+        android:layout_width="336dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:text="REGISTER"
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="338dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signin"
+        android:layout_marginTop="40dp"
+        android:background="#30ffffff"
+        android:drawableLeft="@drawable/ic_baseline_person_outline_24"
+        android:drawablePadding="20dp"
+        android:hint="Name"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signin" />
 
-    <ImageView
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="336dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/username"
+        android:layout_marginTop="36dp"
+        android:background="#30ffffff"
+        android:drawableLeft="@drawable/ic_baseline_info_24"
+        android:drawablePadding="20dp"
+        android:hint="Phone Number"
+        android:inputType="textPassword"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password"
         android:layout_margin="20dp"
-        android:src="@drawable/google"/>
-    <ImageView
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_margin="20dp"
-        android:src="@drawable/fb"/>
-    <ImageView
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_margin="20dp"
-        android:src="@drawable/twitter"/>
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/design_default_color_secondary"
+        android:text="REGISTER"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-</LinearLayout>
+    <Spinner
+        android:id="@+id/states"
+        android:layout_width="326dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="44dp"
+        android:background="#30ffffff"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
