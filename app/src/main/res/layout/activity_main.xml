@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="center"
+    android:background="@drawable/bg"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/Kisan"
+        android:layout_width="256dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="120dp"
+        android:letterSpacing=".08"
+        android:text="@string/Farmers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Head" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="207dp"
+        android:layout_height="186dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/kisan_sarthi2"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Head"
+        android:layout_width="328dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-light"
+        android:letterSpacing=".08"
+        android:text="@string/Head"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+
+    <Button
+        android:id="@+id/Sarthi"
+        android:layout_width="256dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginBottom="172dp"
+        android:letterSpacing=".08"
+        android:text="@string/Experts"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/experts2"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
