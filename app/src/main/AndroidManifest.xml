@@ -15,6 +15,9 @@
         android:theme="@style/Theme.KisanSarthi"
         tools:targetApi="31">
         <activity
+            android:name=".FarmerActivity"
+            android:exported="false" />
+        <activity
             android:name=".CaptureImageActivity"
             android:exported="false" />
         <activity

@@ -17,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 import java.io.File;
 import java.io.IOException;
+import java.util.Objects;
 
 public class CaptureImageActivity extends AppCompatActivity {
     private ImageView imgView;
@@ -41,10 +42,11 @@ public class CaptureImageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_capture_image);
 
+        //String val = getIntent().getExtras().getString('Image');
         imgView = findViewById(R.id.imageView);
         btnChange = findViewById(R.id.captureButton);
         imageUri = createImageUri();
-        imgView.setImageResource(R.drawable.kisan_sarthi2);
+        //imgView.setImageResource(val);
         btnChange.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
